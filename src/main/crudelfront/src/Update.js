@@ -1,16 +1,19 @@
-import { useState } from "react"
-import { onsubmitCreate } from "./Boad"
+import { useEffect, useState } from "react"
+import { useParams } from "react-router-dom"
+import { onsubmitRead, onsubmitUpdate } from "./Boad"
 
-export const Create=()=>{
-
-    const[pack,setPack]=useState({
-        "model":"",
-        "brand":"",
-        "cost":0,
-        "size":0,
-        "type":""
-    })
-
+export const Update=()=>{
+    const{primary}=useParams()
+    
+    const[pack,setPack]=useState({})
+    
+    const onRead=async()=>{
+        const tmp=await onsubmitRead(primary)
+        setPack(tmp.data)
+    }
+    useEffect(()=>{
+        onRead()
+    },[])
     const gather=(eve)=>{
         const{name,value}=eve.target
         setPack((old)=>{
@@ -20,8 +23,8 @@ export const Create=()=>{
             }
         })
     }
-    const onAdd=async()=>{
-        const tmp=await onsubmitCreate(pack)
+    const onUpdate=async()=>{
+        const tmp=await onsubmitUpdate(pack)
         alert(JSON.stringify(tmp.data))
 
     }
@@ -69,11 +72,11 @@ export const Create=()=>{
                                 <input value={pack.brand} onChange={gather} type="text" name="brand" placeholder="Model Brand" className="form-control"></input>
                         </div>
                         <div className="row mt-3 justify-content-around">
-                            <button className="btn btn-outline-danger col-1" onClick={onAdd}>
-                            <i class="bi bi-life-preserver"></i>
+                            <button className="btn btn-outline-danger col-1" onClick={onUpdate}>
+                            <i class="bi bi-file-earmark-plus-fill"></i>
                             </button>
                             <button className="btn btn-outline-success col-1" onClick={onCancel}>
-                            <i class="bi bi-browser-firefox"></i>
+                            <i class="bi bi-x-octagon-fill"></i>
                             </button>
 
                         </div>

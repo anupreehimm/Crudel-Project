@@ -1,6 +1,7 @@
 package combined.project.CurdelProject;
 
-import java.util.Collection;
+import java.util.Collection;import java.util.stream.Collector;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +28,7 @@ public class TelevisionConfi {
 	
 	@Bean
 	public WebSecurityCustomizer share() {
-		return(web)->web.ignoring().antMatchers("/Signup");		
+		return(web)->web.ignoring().antMatchers("/api/Signup");		
 		
 			}
 	
@@ -39,7 +40,7 @@ public class TelevisionConfi {
 		UserDetails myUser2=User.withDefaultPasswordEncoder().username("Ashu").
 				password("Ashu@1").roles("USER").build();
 		
-		Collection<UserDetails> myUsers=Stream.of(myUser1,myUser2).toList();
+		Collection<UserDetails> myUsers=Stream.of(myUser1,myUser2).collect(Collectors.toList());
 		
 		return new InMemoryUserDetailsManager(myUsers);
 	}
