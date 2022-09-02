@@ -54,6 +54,8 @@ public class TelevisionConfi {
 	public SecurityFilterChain praba(HttpSecurity hp) throws Exception {
 		
 		hp.authorizeRequests().anyRequest().authenticated();
+		//hp.authorizeRequests().anyRequest().authenticated();
+		hp.cors();
 		hp.csrf().disable();
 		hp.httpBasic();
 		hp.formLogin();
