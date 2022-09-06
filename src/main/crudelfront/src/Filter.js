@@ -58,7 +58,7 @@ export const Filter=()=>{
                     <div className="container mt-5">
                         <h1 className="text-center display-5 text-success">ShortListed Data</h1>
                         <div className="row justify-content-center">
-                            <div className="col-lg-8 col-md-12 col-sm-16">
+                            <div className="col-lg-8 col-md-12 col-sm-16" style={{backgroundColor:"skyblue"}}>
                                 <div className="form group ">
                                     <label>Filter By cost</label>
                                         <input onChange={collect} value={fil.cost} className="form-control" name="cost" placeholder="Enter the price for filter" type="text"></input>

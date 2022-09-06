@@ -42,7 +42,7 @@ export const SignUp=()=>{
             <>
             <div className="container mt-5">
                 <div className="row justify-content-center">
-                    <div className="col-lg-7 col-md-8 col-sm-12 shadow rounded-5 p-5">
+                    <div className="col-lg-7 col-md-8 col-sm-12 shadow rounded-5 p-5" style={{backgroundColor:"LightGray"}}>
                         <div className="form group">
                             <label>Full Name</label>
                             <input type="text" name="empName" placeholder="enter the name" className="form-control" value={sign.empName

@@ -22,7 +22,7 @@ export const List=()=>{
            <div className="continer mt-4">
                 <h1 className="text-danger text-center display-4">Available Stock are: </h1>
                     <div className="row justify-content-center">
-                        <div className="col-lg-6 col-md-10 col-sm-12">
+                        <div className="col-lg-6 col-md-10 col-sm-12" style={{backgroundColor:"MediumSeaGreen"}}>
                             <div className="table-responsive">
                                 <table className="table table-hover text-nowrap">
                                     <thead>

@@ -22,7 +22,7 @@ export const Remove=()=>{
         <>
             <div className="container mt-4">
                 <div className="row justify-content-center">
-                    <div className="col-lg-6 col-md-8 col-sm-12">
+                    <div className="col-lg-6 col-md-8 col-sm-12" style={{backgroundColor:"Violet"}}>
                         <div className="form-group">
                             <label>Type for Stock Remove</label>
                             <input type="text" name="type" placeholder="Type of television" value={rem} onChange={collect} className="form-control" />

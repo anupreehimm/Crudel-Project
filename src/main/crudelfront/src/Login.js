@@ -42,7 +42,7 @@ export const Login=()=>{
                     <>
                         <div className="container mt-5">
                             <div className="row justify-content-center">
-                                <div className="col-lg-4 col-md-8 col-sm-12 shadow rounded-5 p-5">
+                                <div className="col-lg-4 col-md-8 col-sm-12 shadow rounded-5 p-5" style={{backgroundColor:"SlateBlue"}}>
                                     <div className="form group">
                                         <label>Username</label>
                                         <input type="text" name="username" value={person.username} onChange={gather} placeholder="username please" className="form-control" />
