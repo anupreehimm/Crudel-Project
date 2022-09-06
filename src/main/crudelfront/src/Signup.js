@@ -40,26 +40,26 @@ export const SignUp=()=>{
 
     return(
         <>
-            <div className="container mt-4">
+            <div className="container mt-5">
                 <div className="row justify-content-center">
-                    <div className="col-lg-7 col-md-8 col-sm-12 shadow rounded-5 p-4">
-                        <div className="form-group">
-                            <label>Employee Name</label>
+                    <div className="col-lg-7 col-md-8 col-sm-12 shadow rounded-5 p-5">
+                        <div className="form group">
+                            <label>Full Name</label>
                             <input type="text" name="employee" placeholder="Enter employee name" className="form-contorl" value={sign.empName} onChange={gather}></input>
                         </div>
-                        <div className="form-group">
+                        <div className="form group">
                             <label>User Name</label>
-                            <input type="text" name="user" placeholder="Enter user name" className="form-contorl" value={sign.username} onChange={gather}></input>
+                            <input type="text" name="username" placeholder="Enter user name" className="form-contorl" value={sign.username} onChange={gather}></input>
                         </div>
-                        <div className="form-group">
+                        <div className="form group">
                             <label>password please</label>
                             <input type="password" name="password" placeholder="Enter your password" className="form-contorl" value={sign.password} onChange={gather}></input>
                         </div>
-                        <div className="form-group">
+                        <div className="form group">
                             <label>Employee mobileNo</label>
-                            <input type="text" name="mobileno" placeholder="Enter employee mobileno" className="form-contorl" value={sign.mobileNo} onChange={gather}></input>
+                            <input type="text" name="mobileNo" placeholder="Enter employee mobileno" className="form-contorl" value={sign.mobileNo} onChange={gather}></input>
                         </div>  
-                        <div className="form-group">
+                        <div className="form group">
                             <label>Employee emailid</label>
                             <input type="text" name="email" placeholder="Enter employee email" className="form-contorl" value={sign.email} onChange={gather}></input>
                         </div>
