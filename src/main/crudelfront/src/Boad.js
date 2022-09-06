@@ -32,11 +32,7 @@ export const onSubmitLogin=async(object)=>{
 
 export const onsubmitSignup=async(obj)=>{
     try{
-        const t=await axios.post(`/api/Signup/${obj}`,{
-            headers:{
-                "Authorization":`Basic ${sessionStorage.removeItem('user')}`
-            }
-        })
+        const t=await axios.post(`/api/Signup/`,obj)
         return t
     }
     catch(err){
@@ -47,7 +43,7 @@ export const onsubmitUpdateCond=async(obj)=>{
     try{
         const t=await axios.put(`/api/ups/${obj}`,{
             headers:{
-                "Authorization":`Basic ${sessionStorage.removeItem('user')}`
+                "Authorization":`Basic ${sessionStorage.getItem('user')}`
             }
         })
         return t
@@ -61,7 +57,7 @@ export const onsubmitDeleteCond=async(obj)=>{
     try{
         const t=await axios.delete(`/api/deleall/${obj}`,{
             headers:{
-                "Authorization":`Basic ${sessionStorage.removeItem('user')}`
+                "Authorization":`Basic ${sessionStorage.getItem('user')}`
             }
         })
         return t
@@ -77,7 +73,7 @@ export const onsubmitFilterlist=async(object)=>{
         {
             const t= await axios.get(`/api/byamount/${object.cost}`,{
                 headers:{
-                    "Authorization":`Basic ${sessionStorage.removeItem('user')}`
+                    "Authorization":`Basic ${sessionStorage.getItem('user')}`
                 }
         
             })
@@ -87,7 +83,7 @@ export const onsubmitFilterlist=async(object)=>{
         {
             const t= await axios.get(`/api/bytwo/${object.brand}/${object.type}`,{
                 headers:{
-                    "Authorization":`Basic ${sessionStorage.removeItem('user')}`
+                    "Authorization":`Basic ${sessionStorage.getItem('user')}`
                 }
         
             })
@@ -97,7 +93,7 @@ export const onsubmitFilterlist=async(object)=>{
         {
             const t= await axios.get(`/api/bysome/${object.model}`,{
                 headers:{
-                    "Authorization":`Basic ${sessionStorage.removeItem('user')}`
+                    "Authorization":`Basic ${sessionStorage.getItem('user')}`
                 }
             })
             return t
@@ -117,7 +113,7 @@ export const onsubmitDelete=async(ref)=>{
     try{
         const t=await axios.delete(`/api/dele/${ref}`,{
             headers:{
-                "Authorization":`Basic ${sessionStorage.removeItem('user')}`
+                "Authorization":`Basic ${sessionStorage.getItem('user')}`
             }
         })
         return t
@@ -130,7 +126,7 @@ export const onsubmitUpdate=async(obj)=>{
     try{
         const t=await axios.put(`/api/up`, obj,{
             headers:{
-                "Authorization":`Basic ${sessionStorage.removeItem('user')}`
+                "Authorization":`Basic ${sessionStorage.getItem('user')}`
             }
         })
         return t
@@ -145,7 +141,7 @@ export const onsubmitRead=async(id)=>{
     try{
         const t=await axios.get(`/api/${id}`,{
             headers:{
-                "Authorization":`Basic ${sessionStorage.removeItem('user')}`
+                "Authorization":`Basic ${sessionStorage.getItem('user')}`
             }
         })
         return t
@@ -159,7 +155,7 @@ export const onsubmitList=async()=>{
     try{
         const t=await axios.get(`/api/`,{
             headers:{
-                "Authorization":`Basic ${sessionStorage.removeItem('user')}`
+                "Authorization":`Basic ${sessionStorage.getItem('user')}`
             }
         })
         return t
@@ -173,7 +169,7 @@ export const onsubmitCreate=async(obj)=>{
     try{
         const t=await axios.post(`/api/new`,obj,{
             headers:{
-                "Authorization":`Basic ${sessionStorage.removeItem('user')}`
+                "Authorization":`Basic ${sessionStorage.getItem('user')}`
             }
         })
         return t

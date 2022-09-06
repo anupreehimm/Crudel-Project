@@ -42,7 +42,7 @@ export const SignUp=()=>{
         <>
             <div className="container mt-4">
                 <div className="row justify-content-center">
-                    <div className="col-lg-6 col-md-10 col-sm-12">
+                    <div className="col-lg-7 col-md-8 col-sm-12 shadow rounded-5 p-4">
                         <div className="form-group">
                             <label>Employee Name</label>
                             <input type="text" name="employee" placeholder="Enter employee name" className="form-contorl" value={sign.empName} onChange={gather}></input>
@@ -62,6 +62,14 @@ export const SignUp=()=>{
                         <div className="form-group">
                             <label>Employee emailid</label>
                             <input type="text" name="email" placeholder="Enter employee email" className="form-contorl" value={sign.email} onChange={gather}></input>
+                        </div>
+                        <div className="mt-4 row justify-content-around">
+                            <button className="col-1 btn btn-success" onClick={onSign}>
+                                <i class="bi bi-person-circle"></i>
+                            </button>
+                            <button className="col-1 btn btn-dark" onClick={OnRest}>
+                                <i class="bi bi-slash-circle"></i>
+                            </button>
                         </div>
 
 
